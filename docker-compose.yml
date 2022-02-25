@@ -1,0 +1,31 @@
+version: '3.5'
+
+services:
+  laravel:
+    build:
+      context: '.'
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 8000:80
+
+  pgsql:
+    image: postgres:9.5
+    volumes:
+      - ./docker/postgres:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=laravel
+      - POSTGRES_USER=laravel
+      - POSTGRES_PASSWORD=secret
+
+  phppgadmin:
+    image: neimheadh/phppgadmin:latest
+    ports:
+      - '8888:80'
+    environment:
+      - POSTGRES_HOST=pgsql
+      - POSTGRES_PORT=5432
+      - POSTGRES_USER=laravel
+      - POSTGRES_PASS=secret
+    depends_on:
+      - pgsql
