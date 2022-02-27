@@ -18,7 +18,12 @@ RUN apt-get install -y \
     libreadline-dev \
     libfreetype6-dev \
     libzip-dev \
+    libcurl4-openssl-dev \
+    pkg-config \
+    libssl-dev \
     g++
+
+RUN pecl install mongodb && docker-php-ext-enable mongodb
 
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf

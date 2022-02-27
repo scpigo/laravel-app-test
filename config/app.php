@@ -161,15 +161,12 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
-
-        App\Modules\auth\src\Providers\JwtAuthServiceProvider::class,
-
         
         /*
          * Package Service Providers...
          */
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+        Jenssegers\Mongodb\MongodbServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -179,6 +176,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+
+        App\Modules\auth\src\Providers\JwtAuthServiceProvider::class,
+        App\Modules\posts_metrics\src\Providers\PostsMetricsServiceProvider::class,
 
     ],
 
