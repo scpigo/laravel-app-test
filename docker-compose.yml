@@ -54,3 +54,13 @@ services:
       ME_CONFIG_BASICAUTH_PASSWORD: example
     links:
       - mongo
+  
+  redis:
+    build:
+      context: ./redis
+    volumes:
+      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./docker/redis:/data
+    ports:
+      - '6379:6379'
+

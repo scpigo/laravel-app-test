@@ -31,8 +31,6 @@ class CreateUserRefreshTokensTable extends Migration
      */
     public function down()
     {
-        Schema::table('user_refresh_tokens', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('user_refresh_tokens');
     }
 }

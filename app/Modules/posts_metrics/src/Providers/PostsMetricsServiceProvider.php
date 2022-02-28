@@ -12,6 +12,10 @@ class PostsMetricsServiceProvider extends \Illuminate\Support\ServiceProvider {
         PostsMetricsInterface::class => PostsMetricsMongoService::class,
     ];
 
+    public $singletons = [
+        'CacheManager' => PostsMetricsInterface::class,
+    ];
+
     public function boot() { 
         if(file_exists(__DIR__.'/../Routes/routes.php')) { 
             $this->loadRoutesFrom(__DIR__.'/../Routes/routes.php');

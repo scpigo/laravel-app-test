@@ -28,8 +28,8 @@ class AuthController extends Controller
 
         if ($validator->fails()) {
             return response()->json([
-                'data' => [],
-                'statusText' => $validator->errors(),
+                'data' => $validator->errors(),
+                'statusText' => 'Ошибка валидации',
                 'status' => 'error'
             ], 400);
         }
@@ -58,8 +58,8 @@ class AuthController extends Controller
 
         if ($validator->fails()) {
             return response()->json([
-                'data' => [],
-                'statusText' => $validator->errors(),
+                'data' => $validator->errors(),
+                'statusText' => 'Ошибка валидации',
                 'status' => 'error'
             ], 422);
         }
