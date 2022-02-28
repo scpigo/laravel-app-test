@@ -27,11 +27,11 @@ class PostsMetricsSearchRequest extends FormRequest
     public function rules()
     {
         return [
-            'group_type' => 'present|string|max:32',
+            'group_type' => 'present|string|max:32|in:vk,ok,fb',
             'page' => 'present|integer',
             'pageSize' => 'present|integer',
-            'sort' => 'present|string|max:32',
-            'sortType' => 'present|string|max:32',
+            'sort' => 'present|string|max:32|in:post_id,views,likes,comments,reposts',
+            'sortType' => 'present|string|max:32|in:asc,desc',
         ];
     }
 
