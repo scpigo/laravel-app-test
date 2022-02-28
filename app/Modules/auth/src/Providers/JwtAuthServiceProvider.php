@@ -2,7 +2,6 @@
 
 namespace App\Modules\auth\src\Providers;
 
-/** * Сервис провайдер для подключения модулей */ 
 class JwtAuthServiceProvider extends \Illuminate\Support\ServiceProvider { 
     public function boot() { 
         if(file_exists(__DIR__.'/../Routes/routes.php')) { 

@@ -3,9 +3,15 @@
 namespace App\Modules\posts_metrics\src\Providers;
 
 use App\Modules\posts_metrics\src\Commands\GeneratePostsMetrics;
+use App\Modules\posts_metrics\src\Services\Implems\PostsMetricsMongoService;
+use App\Modules\posts_metrics\src\Services\Interfaces\PostsMetricsInterface;
 
-/** * Сервис провайдер для подключения модулей */ 
 class PostsMetricsServiceProvider extends \Illuminate\Support\ServiceProvider { 
+    
+    public $bindings = [
+        PostsMetricsInterface::class => PostsMetricsMongoService::class,
+    ];
+
     public function boot() { 
         if(file_exists(__DIR__.'/../Routes/routes.php')) { 
             $this->loadRoutesFrom(__DIR__.'/../Routes/routes.php');

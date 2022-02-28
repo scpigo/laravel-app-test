@@ -3,10 +3,8 @@
 namespace App\Modules\posts_metrics\src\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Modules\posts_metrics\src\Models\PostsMetric;
 use App\Modules\posts_metrics\src\Requests\PostsMetricsSearchRequest;
-use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
+use App\Modules\posts_metrics\src\Services\Interfaces\PostsMetricsInterface;
 
 class PostsMetricsController extends Controller
 {
@@ -14,9 +12,8 @@ class PostsMetricsController extends Controller
     {
         $params = $request->validated();
 
-        $data = PostsMetric::where('group_type', Arr::get($params, 'group_type'))
-            ->orderBy(Arr::get($params, 'sort'), Arr::get($params, 'sortType'))
-            ->paginate(10, ['*'], 'page');
+        $service = app()->make(PostsMetricsInterface::class);
+        $data = $service->search($params);
         
         return response()->json([
             'data' => [
