@@ -181,6 +181,8 @@ return [
         App\Modules\auth\src\Providers\JwtAuthServiceProvider::class,
         App\Modules\posts_metrics\src\Providers\PostsMetricsServiceProvider::class,
         App\Modules\cache\src\Providers\CacheServiceProvider::class,
+        App\Modules\queue\src\Providers\QueueServiceProvider::class,
+        App\Modules\queue\src\Providers\EventServiceProvider::class,
 
     ],
 
