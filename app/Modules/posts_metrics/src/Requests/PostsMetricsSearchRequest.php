@@ -27,7 +27,7 @@ class PostsMetricsSearchRequest extends FormRequest
     public function rules()
     {
         return [
-            'group_type' => 'present|string|max:32|in:vk,ok,fb',
+            'group_type' => 'nullable|string|max:32|in:vk,ok,fb',
             'page' => 'present|integer',
             'pageSize' => 'present|integer',
             'sort' => 'present|string|max:32|in:post_id,views,likes,comments,reposts',

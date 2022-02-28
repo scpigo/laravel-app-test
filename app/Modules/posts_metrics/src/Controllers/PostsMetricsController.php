@@ -3,6 +3,7 @@
 namespace App\Modules\posts_metrics\src\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Modules\posts_metrics\src\Filters\PostsMetricFilter;
 use App\Modules\posts_metrics\src\Requests\PostsMetricsSearchRequest;
 use App\Modules\posts_metrics\src\Services\Interfaces\PostsMetricsInterface;
 
@@ -16,10 +17,7 @@ class PostsMetricsController extends Controller
         $data = $service->search($params);
         
         return response()->json([
-            'data' => [
-                'count' => count($data),
-                'items' => $data
-            ],
+            'data' => $data,
             'statusText' => 'Метрики возвращены',
             'status' => 'ok'
         ], 201);
