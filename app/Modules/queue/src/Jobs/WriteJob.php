@@ -15,6 +15,7 @@ class WriteJob implements ShouldQueue
 
     private $file;
     private $text;
+    
     /**
      * Create a new job instance.
      *

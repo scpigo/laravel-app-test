@@ -72,14 +72,13 @@ return [
         ],
 
         'rabbitmq' => [
-    
             'driver' => 'rabbitmq',
-            'queue' => env('RABBITMQ_QUEUE', 'default'),
+            'queue' => env('RABBITMQ_QUEUE', 'queueFile'),
             'connection' => PhpAmqpLib\Connection\AMQPLazyConnection::class,
         
             'hosts' => [
                 [
-                    'host' => env('RABBITMQ_HOST', '127.0.0.1'),
+                    'host' => env('RABBITMQ_HOST', 'rabbitmq'),
                     'port' => env('RABBITMQ_PORT', 5672),
                     'user' => env('RABBITMQ_USER', 'guest'),
                     'password' => env('RABBITMQ_PASSWORD', 'guest'),
@@ -99,12 +98,8 @@ return [
                     'job' => VladimirYuldashev\LaravelQueueRabbitMQ\Queue\Jobs\RabbitMQJob::class,
                 ],
             ],
-        
-            /*
-             * Set to "horizon" if you wish to use Laravel Horizon.
-             */
-            'worker' => env('RABBITMQ_WORKER', 'default'),
-             
+
+            'worker' => env('RABBITMQ_WORKER', 'default'),  
          ],
 
     ],

@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 class QueueController extends Controller
 {
     public function send() {
-        WriteJob::dispatch(base_path().'/rabbitmq_test.txt', Str::random(16)."\n");
+        WriteJob::dispatch(base_path().'/rabbitmq_test.txt', Str::random(16)."\n")->onConnection('rabbitmq');
 
         return response()->json([
             'data' => [],
