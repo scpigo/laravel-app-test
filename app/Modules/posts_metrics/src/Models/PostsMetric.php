@@ -19,4 +19,10 @@ class PostsMetric extends Model
         'comments',
         'reposts',
     ];
+
+    public function scopeGroupType($query, $group_type) {
+        if (!is_null($group_type)) {
+            return $query->where('group_type', $group_type);
+        }
+    }
 }
