@@ -167,6 +167,7 @@ return [
          */
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         Jenssegers\Mongodb\MongodbServiceProvider::class,
+        Scpigo\SystemJob\Providers\JobServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -182,10 +183,8 @@ return [
         App\Modules\posts_metrics\src\Providers\PostsMetricsServiceProvider::class,
         App\Modules\cache\src\Providers\CacheServiceProvider::class,
         App\Modules\queue\src\Providers\QueueServiceProvider::class,
-        App\Modules\queue\src\Providers\EventServiceProvider::class,
         App\Modules\calculator_service\src\Providers\CalculatorServiceProvider::class,
-        App\Modules\system_job\src\Providers\JobServiceProvider::class,
-        App\Modules\system_job\src\Providers\EventServiceProvider::class,
+        App\Modules\system_job_2\src\Providers\JobServiceProvider::class,
 
     ],
 

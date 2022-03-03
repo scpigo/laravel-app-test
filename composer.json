@@ -33,7 +33,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "Scpigo\\SystemJob\\": "package/system_job/src/"
         }
     },
     "scripts": {
