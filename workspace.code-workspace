@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\repositories\\scpigo\\laravel-system-job"
+		}
+	],
+	"settings": {}
+}

@@ -6,6 +6,7 @@ services:
       context: '.'
     volumes:
       - .:/var/www/html
+      - ./../repositories:/var/www/html/packages
     ports:
       - 8000:80
 

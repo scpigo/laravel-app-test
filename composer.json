@@ -14,7 +14,8 @@
         "laravel/tinker": "^2.5",
         "predis/predis": "^1.1",
         "tymon/jwt-auth": "^1.0",
-        "vladimir-yuldashev/laravel-queue-rabbitmq": "^11.3"
+        "vladimir-yuldashev/laravel-queue-rabbitmq": "^11.3",
+        "scpigo/laravel-system-job": "@dev"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -63,5 +64,11 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/scpigo/laravel-system-job"
+        }
+    ]
 }

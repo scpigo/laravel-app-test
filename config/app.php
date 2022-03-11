@@ -167,7 +167,7 @@ return [
          */
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         Jenssegers\Mongodb\MongodbServiceProvider::class,
-        Scpigo\SystemJob\Providers\JobServiceProvider::class,
+        Scpigo\SystemJob\Providers\SystemJobServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -184,7 +184,7 @@ return [
         App\Modules\cache\src\Providers\CacheServiceProvider::class,
         App\Modules\queue\src\Providers\QueueServiceProvider::class,
         App\Modules\calculator_service\src\Providers\CalculatorServiceProvider::class,
-        App\Modules\system_job_2\src\Providers\JobServiceProvider::class,
+        App\Modules\system_job\src\Providers\JobServiceProvider::class,
 
     ],
 
@@ -240,6 +240,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        'SystemJobManager' => Scpigo\SystemJob\Facades\SystemJobManagerFacade::class
 
     ],
 
