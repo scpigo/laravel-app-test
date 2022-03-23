@@ -3638,7 +3638,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/scpigo/laravel-1c-exchange-xml",
-                "reference": "34074e7f59a716d26bd66906538965ff3f4587ec"
+                "reference": "44fc234bf71d991f32c07bdf1a0dd17f98a13801"
             },
             "require": {
                 "laravel/framework": "^8.0",
