@@ -12,10 +12,16 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+        "league/flysystem-sftp": "~1.0",
+        "mtownsend/xml-to-array": "^2.0",
         "predis/predis": "^1.1",
+        "scpigo/laravel-core": "@dev",
+        "scpigo/laravel-1c-exchange-xml": "@dev",
+        "scpigo/laravel-system-job": "@dev",
+        "spatie/array-to-xml": "^2.16",
+        "spatie/laravel-fractal": "^5.8",
         "tymon/jwt-auth": "^1.0",
-        "vladimir-yuldashev/laravel-queue-rabbitmq": "^11.3",
-        "scpigo/laravel-system-job": "@dev"
+        "vladimir-yuldashev/laravel-queue-rabbitmq": "^11.3"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
@@ -68,7 +74,15 @@
     "repositories": [
         {
             "type": "path",
+            "url": "packages/scpigo/laravel-core"
+        },
+        {
+            "type": "path",
             "url": "packages/scpigo/laravel-system-job"
+        },
+        {
+            "type": "path",
+            "url": "packages/scpigo/laravel-1c-exchange-xml"
         }
     ]
 }

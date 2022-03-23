@@ -167,7 +167,9 @@ return [
          */
         Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
         Jenssegers\Mongodb\MongodbServiceProvider::class,
+        Scpigo\LaravelCore\Providers\ServiceProvider::class,
         Scpigo\SystemJob\Providers\SystemJobServiceProvider::class,
+        Scpigo\Laravel1cXml\Providers\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -185,6 +187,7 @@ return [
         App\Modules\queue\src\Providers\QueueServiceProvider::class,
         App\Modules\calculator_service\src\Providers\CalculatorServiceProvider::class,
         App\Modules\system_job\src\Providers\JobServiceProvider::class,
+        App\Modules\xml_1c_exchange\src\Providers\ServiceProvider::class,
 
     ],
 

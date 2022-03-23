@@ -52,6 +52,13 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
         ],
+        'sftp' => [
+            'driver' => 'sftp',
+            'host' => 'dev1.thecoders.ru',
+            'port' => 6843,
+            'username' => 'm.rastroguev',
+            'password' => '2B+agKl0E@Xp#umv',
+        ]
 
     ],
 

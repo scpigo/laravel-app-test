@@ -31,7 +31,7 @@ class CreateJobForm {
         $dto->action_params = $request->action_params;
         $dto->scheduled_at =  Carbon::createFromFormat('Y-m-d H:i:s', $request->scheduled_at);
 
-        $data = SystemJobManager::scheduler('sql')->schedule($dto);
+        $data = SystemJobManager::scheduler('mongo')->schedule($dto);
 
         if (!$data) {
             return false;
