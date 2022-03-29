@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32134eb0727755944c330d016f73427a",
+    "content-hash": "7575489e05890dd93ea65b54d54ade44",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2284,6 +2284,61 @@
             "time": "2016-12-05T07:27:31+00:00"
         },
         {
+            "name": "needle-project/laravel-rabbitmq",
+            "version": "0.3.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/needle-project/laravel-rabbitmq.git",
+                "reference": "2a6de5d90612b098e665114981b973ab6a788fe5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/needle-project/laravel-rabbitmq/zipball/2a6de5d90612b098e665114981b973ab6a788fe5",
+                "reference": "2a6de5d90612b098e665114981b973ab6a788fe5",
+                "shasum": ""
+            },
+            "require": {
+                "php": "7.*",
+                "php-amqplib/php-amqplib": ">=2.7 <3.0"
+            },
+            "require-dev": {
+                "laravel/framework": "5.5.*",
+                "phpmd/phpmd": "@stable",
+                "phpunit/phpunit": "7.*|6.*",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "NeedleProject\\LaravelRabbitMq\\Providers\\ServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "NeedleProject\\LaravelRabbitMq\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adrian Tilita",
+                    "email": "adrian@tilita.ro",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple rabbitmq integration for Laravel",
+            "support": {
+                "issues": "https://github.com/needle-project/laravel-rabbitmq/issues",
+                "source": "https://github.com/needle-project/laravel-rabbitmq/tree/0.3.6"
+            },
+            "time": "2021-08-11T08:02:17+00:00"
+        },
+        {
             "name": "nesbot/carbon",
             "version": "2.57.0",
             "source": {
@@ -2649,22 +2704,22 @@
         },
         {
             "name": "php-amqplib/php-amqplib",
-            "version": "v3.2.0",
+            "version": "v2.12.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-amqplib/php-amqplib.git",
-                "reference": "0bec5b392428e0ac3b3f34fbc4e02d706995833e"
+                "reference": "f746eb44df6d8f838173729867dd1d20b0265faa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-amqplib/php-amqplib/zipball/0bec5b392428e0ac3b3f34fbc4e02d706995833e",
-                "reference": "0bec5b392428e0ac3b3f34fbc4e02d706995833e",
+                "url": "https://api.github.com/repos/php-amqplib/php-amqplib/zipball/f746eb44df6d8f838173729867dd1d20b0265faa",
+                "reference": "f746eb44df6d8f838173729867dd1d20b0265faa",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "ext-sockets": "*",
-                "php": "^7.1||^8.0",
+                "php": ">=5.6.3,<8.0",
                 "phpseclib/phpseclib": "^2.0|^3.0"
             },
             "conflict": {
@@ -2676,13 +2731,13 @@
             "require-dev": {
                 "ext-curl": "*",
                 "nategood/httpful": "^0.2.20",
-                "phpunit/phpunit": "^7.5|^9.5",
-                "squizlabs/php_codesniffer": "^3.6"
+                "phpunit/phpunit": "^5.7|^6.5|^7.0",
+                "squizlabs/php_codesniffer": "^3.5"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "2.12-dev"
                 }
             },
             "autoload": {
@@ -2724,9 +2779,9 @@
             ],
             "support": {
                 "issues": "https://github.com/php-amqplib/php-amqplib/issues",
-                "source": "https://github.com/php-amqplib/php-amqplib/tree/v3.2.0"
+                "source": "https://github.com/php-amqplib/php-amqplib/tree/v2.12.3"
             },
-            "time": "2022-03-10T19:16:00+00:00"
+            "time": "2021-03-01T12:21:31+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -3638,7 +3693,7 @@
             "dist": {
                 "type": "path",
                 "url": "packages/scpigo/laravel-1c-exchange-xml",
-                "reference": "44fc234bf71d991f32c07bdf1a0dd17f98a13801"
+                "reference": "bbc8529ad597ffc83b826985833fb215cc23cb40"
             },
             "require": {
                 "laravel/framework": "^8.0",
@@ -9193,8 +9248,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "scpigo/laravel-core": 20,
         "scpigo/laravel-1c-exchange-xml": 20,
+        "scpigo/laravel-core": 20,
         "scpigo/laravel-system-job": 20
     },
     "prefer-stable": true,
